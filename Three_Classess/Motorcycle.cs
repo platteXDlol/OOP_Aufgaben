@@ -1,28 +1,43 @@
 ﻿namespace Three_Classess;
 
-public class Motorcycle
+public class Motorcycle : Vehicle, IMotorizedVehicle
 {
-    public string Brand { get; }
-    public string Model { get; }
-    public string Color { get; set; }
+    public bool IsStarted { get; set; }
+    public Motorcycle(string brand, string model, string color, int wheels, UsedCondition usedCondition) : base(brand, model, color, usedCondition)
+    {
+        this.wheels = wheels;
+    }
+    
+    public int wheels { get; set; }
 
-    public Motorcycle(string brand, string model, string color)
+    public override void drive()
     {
-        Brand = brand;
-        Model = model;
-        Color = color;
+        Console.WriteLine("The motorcycle is driving");
     }
     
-    public void printinfo()
+    public void StartEngine()
     {
-        Console.WriteLine($"Brand: {Brand}, Model: {Model}, Color: {Color}");
+        if (!this.IsStarted)
+        {
+            Console.WriteLine("The engine is starting");
+            this.IsStarted = true;
+        }
+        else
+        {
+            Console.WriteLine("The engine is already started");
+        }
     }
     
-    public void drive()
+    public void StopEngine()
     {
-        Console.WriteLine("Motorcycle is driving");
+        if (this.IsStarted)
+        {
+            Console.WriteLine("The engine is stopping");
+            this.IsStarted = false;
+        }
+        else
+        {
+            Console.WriteLine("The engine is already stopped");
+        }
     }
 }
-
-
-    

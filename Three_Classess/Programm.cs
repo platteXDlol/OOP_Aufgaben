@@ -2,22 +2,29 @@
 
 public class Programm
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
-        Car car = new Car("Toyota", "AE86", "white");
+        var car = new Car("Toyota", "AE86", "white", 200, 4, UsedCondition.notWorking);
         car.printinfo();
         car.drive();
-        
+        car.StartEngine();
+        car.StartEngine();
+        car.StopEngine();
+        car.StartEngine();
+        car.honk();
+
         Console.WriteLine();
-        
-        Mountanbike bike = new Mountanbike("Canyon", "Spectral", "black");
+
+        var bike = new Mountanbike("Canyon", "Spectral", "black", true, UsedCondition.slightlyUsed);
         bike.printinfo();
         bike.drive();
-        
+
         Console.WriteLine();
-        
-        Motorcycle motorcycle = new Motorcycle("Kawasaki", "Ninja", "green");
+
+        var motorcycle = new Motorcycle("Kawasaki", "Ninja", "green", 2, UsedCondition.New);
         motorcycle.printinfo();
         motorcycle.drive();
+        motorcycle.StopEngine();
+        motorcycle.StartEngine();
     }
 }

@@ -1,26 +1,17 @@
 ﻿namespace Three_Classess;
 
-public class Mountanbike
+public class Mountanbike : Vehicle
 {
+    public Mountanbike(string brand, string model, string color, bool isElectric, UsedCondition usedCondition) : base(brand, model, color, usedCondition)
+    {
+        IsElectric = isElectric;
+    }
     
-    public string Brand { get; }
-    public string Model { get; }
-    public string Color { get; set; }
 
-    public Mountanbike(string brand, string model, string color)
+    public bool IsElectric { get; set; }
+
+    public override void drive()
     {
-        Brand = brand;
-        Model = model;
-        Color = color;
-    }
-    
-    public void printinfo()
-    {
-        Console.WriteLine($"Brand: {Brand}, Model: {Model}, Color: {Color}");
-    }
-    
-    public void drive()
-    {
-        Console.WriteLine("Mountanbike is driving");
+        Console.WriteLine("The mountanbike is driving");
     }
 }
