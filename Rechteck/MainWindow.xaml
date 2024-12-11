@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPF_Tutorial"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -14,14 +13,14 @@
         </Grid.ColumnDefinitions>
 
 
-        <Label Name="widthRect" 
+        <Label Name="WidthRect" 
                Content="Breite des Rechtecks" 
                FontSize="20"
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 
                Margin="0, 120, 0, 0" />
         
-        <TextBox Name="widthInput"
+        <TextBox Name="WidthInput"
                  Width="200" Height="30"
                  HorizontalAlignment="Center"
                  VerticalAlignment="Top"
@@ -29,7 +28,7 @@
                  Grid.Column="1"
                  Text="Hallo" />
 
-        <Button Name="btnCalc" Content="Berechnen"
+        <Button Name="BtnCalc" Content="Berechnen"
                 Width="200" Height="30"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
@@ -37,14 +36,15 @@
                 Grid.Column="2"
                 Click="BerechneButton_Click" />
 
-        <Label Name="heightRect" 
+        <Label Name="HeightRect" 
                Content="Höhe des Rechtecks" 
                FontSize="20"
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 
+               Grid.Column="0"
                Margin="0, 200, 0, 0" />
 
-        <TextBox Name="heightInput"
+        <TextBox Name="HeightInput"
                  Width="200" Height="30"
                  HorizontalAlignment="Center"
                  VerticalAlignment="Top"
@@ -53,14 +53,15 @@
                  Text="Hallo" />
 
 
-        <Label Name="result"
+        <Label Name="Result"
                Content="Ausgabe (Fläche)" 
                FontSize="20"
                HorizontalAlignment="Center" 
                VerticalAlignment="Top" 
+               Grid.Column="0"
                Margin="0, 300, 0, 0" />
 
-        <TextBox Name="resultRect"
+        <TextBox Name="ResultRect"
                  Width="200" Height="30"
                  HorizontalAlignment="Center"
                  VerticalAlignment="Top"
@@ -68,7 +69,7 @@
                  Grid.Column="1"
                  Text="Hallo" />
 
-        <Button Name="btnEnd"
+        <Button Name="BtnEnd"
                 Content="Beenden"
                 Width="200" Height="30"
                 HorizontalAlignment="Center"

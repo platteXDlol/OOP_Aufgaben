@@ -2,11 +2,12 @@
 
 public class Mountanbike : Vehicle
 {
-    public Mountanbike(string brand, string model, string color, bool isElectric, UsedCondition usedCondition) : base(brand, model, color, usedCondition)
+    public Mountanbike(string brand, string model, string color, bool isElectric, UsedCondition usedCondition) : base(
+        brand, model, color, usedCondition)
     {
         IsElectric = isElectric;
     }
-    
+
 
     public bool IsElectric { get; set; }
 

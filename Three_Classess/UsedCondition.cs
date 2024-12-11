@@ -2,12 +2,11 @@
 
 public enum UsedCondition
 {
-    New,                    
-    slightlyUsed,       
+    New,
+    slightlyUsed,
     Used,
     slightlyDamaged,
     damaged,
     notWorking,
-    totalDamaged,
-    
+    totalDamaged
 }

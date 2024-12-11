@@ -13,7 +13,7 @@ public abstract class Vehicle
     public string Brand { get; }
     public string Model { get; }
     public string Color { get; set; }
-    
+
     public UsedCondition UsedCondition { get; set; }
 
     public virtual void printinfo()

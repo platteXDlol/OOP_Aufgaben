@@ -22,11 +22,11 @@ namespace WPF_Tutorial
         private void BerechneButton_Click(object sender, RoutedEventArgs e)
         {
             Rechteck rechteck = new Rechteck();
-            rechteck.Height = double.Parse(heightInput.Text);
-            rechteck.Width = double.Parse(widthInput.Text);
+            rechteck.Height = double.Parse(HeightInput.Text);
+            rechteck.Width = double.Parse(WidthInput.Text);
 
             double area = rechteck.GetArea();
-            resultRect.Text = area.ToString();
+            ResultRect.Text = area.ToString();
         }
 
         private void EndeButton_Click(object sender, RoutedEventArgs e)
