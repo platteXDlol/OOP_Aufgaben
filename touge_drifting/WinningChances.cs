@@ -36,7 +36,7 @@ public class WinningChances
     };
 
     
-    baseWinningChances = Math.Clamp(baseWinningChances, 0, 100);
+    baseWinningChances = Math.Clamp(baseWinningChances, 0.9, 98.8);
     
     return baseWinningChances;
 }

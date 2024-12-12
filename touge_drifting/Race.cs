@@ -43,7 +43,7 @@ public class Race
       
         for (int i = 0; i < sortedCars.Count; i++)
         {
-            Console.WriteLine($"{i + 1}. {sortedCars[i].car.Brand} {sortedCars[i].car.Model} - Winning Chances: {sortedCars[i].car.WinningChances}% | Final Adjusted: {sortedCars[i].WinningChancesFinal}%");
+            Console.WriteLine($"{i + 1}. {sortedCars[i].car.Brand} {sortedCars[i].car.Model} - Winning Chances: {sortedCars[i].car.WinningChances}%              | Final Adjusted: {sortedCars[i].WinningChancesFinal}%");
         }
 
      
